@@ -8,7 +8,7 @@ var env = 'dev';
 var config = require('./gulp/config');
 var WEBAPP_DIR = config.webappDir;
 var BUILD_DIR = config.buildDir;
-var PROVIDER_DIR = WEBAPP_DIR + "js/provider/";
+var UTIL_DIR = WEBAPP_DIR + "js/util/";
 var CONTROLLER_DIR = WEBAPP_DIR + "js/controller/";
 var DIRECTIVE_DIR = WEBAPP_DIR + "js/directive/";
 // Static server
@@ -41,10 +41,10 @@ gulp.task('my-watch', function () {
 });
 gulp.task('build-js', function () {
     var module = WEBAPP_DIR + "js/module.js";
-    var all_provider = PROVIDER_DIR + "**";
+    var all_utils = UTIL_DIR + "**";
     var all_controller = CONTROLLER_DIR + "**";
     var all_directive = DIRECTIVE_DIR + "**";
-    return gulp.src([module, all_provider, all_controller, all_directive]).pipe(
+    return gulp.src([module, all_utils, all_controller, all_directive]).pipe(
         concat('app.js')).pipe(gulp.dest(BUILD_DIR + 'js'));
 });
 gulp.task('minify-js', function () {

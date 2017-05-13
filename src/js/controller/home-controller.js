@@ -1,4 +1,4 @@
-angular.module("Interest").controller("HomeController", ['$scope', function ($scope) {
+angular.module("Interest").controller("HomeController", ['interestCalculator', function (calculator) {
 
     var vm = this;
     vm.data = {};
@@ -19,26 +19,13 @@ angular.module("Interest").controller("HomeController", ['$scope', function ($sc
     vm.frequency = vm.frequencyTypes[0];
 
     vm.calculate = function () {
+        var timeInYear = vm.timeType === "Years" ? vm.time : vm.time / 12;
+
         if (vm.isCompound)
-            return calculateCompound();
-        return calculateSimple();
-    }
-    function calculateSimple() {
-        //A = P(1 + rt)
-        var timeInYear = vm.timeType === "Years" ? vm.time : vm.time / 12;
-        return vm.principle * (1.0 + vm.rate * timeInYear / 100.0);
+            return calculator.calculateCompound(vm.principle, vm.rate, timeInYear, vm.frequency.value);
+        return calculator.calculateSimple(vm.principle, vm.rate, timeInYear);
     }
 
-    function calculateCompound() {
-
-        //A = P(1 + r/n)^nt
-        var rateInDecimal = vm.rate / 100;
-        var timeInYear = vm.timeType === "Years" ? vm.time : vm.time / 12;
-        var a = (1 + rateInDecimal / vm.frequency.value);
-        var b = vm.frequency.value * timeInYear;
-
-        return vm.principle * Math.pow(a, b);
-    }
 
     vm.validate = function () {
         if (isNaN(vm.time) || isNaN(vm.rate) || isNaN(vm.principle))
