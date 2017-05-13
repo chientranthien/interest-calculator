@@ -1,6 +1,7 @@
 # interest-calculator
 This is a simple AngularJS application which help calculating the simple and compound interest.
-
+<br>
+URL: https://interest-cal.herokuapp.com/ 
 # 4 hours of understanding requirements and coding.
 The requirements were a little bit strange for me. 
 Because I've never developed any kind of financial application. 
