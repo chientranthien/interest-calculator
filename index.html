@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!--BOOTSTRAP-->
+    <link href="src/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!--CUSTOM FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="src/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--STYLE.CSS-->
+    <link href="build/css/style.css" rel="stylesheet">
+
+</head>
+<body ng-app="Appointment">
+<div data-ng-include=" 'build/ui/header.html' "></div>
+
+<div ui-view=""></div>
+<!--ANGULAR & JQUERY-->
+<script src="src/bower_components/angular/angular.min.js"></script>
+
+<!--UI ROUTER-->
+<script src="src/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="src/bower_components/jquery/dist/jquery.min.js"></script>
+
+<!--BOOTSTRAP-->
+<script src="src/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+<!-- CONFIG -->
+<script type="text/javascript" src="build/js/app.js"></script>
+
+</body>
+
+</html>

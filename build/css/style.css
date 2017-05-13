@@ -1,0 +1,63 @@
+
+.navbar-brand {
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+* {
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif'; }
+
+body {
+  padding-top: 70px; }
+
+.form-select {
+  background: none;
+  border-radius: 0;
+  width: 30%;
+  height: 40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* remove default arrow */
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: center right 5px;
+  background-image: url(../../build/img/down-arrow.png);
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  padding: 6px 12px; }
+
+select::-ms-expand {
+  display: none;
+  /* remove default arrow in IE 10 and 11 */ }
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width: 0 \0 ) {
+  select {
+    background: none \9;
+    padding: 5px \9; } }
+
+.form .input-group {
+  display: flex; }
+  .form .input-group .input-group-addon {
+    min-width: 50px;
+    padding: 12px 5px; }
+
+.form .form-control {
+  height: 40px; }
+
+.form > div {
+  margin: 10px 0; }
+
+.result {
+  border-bottom: 3px solid black; }
+
+#interest-type {
+  margin: 0 7px 0 0; }
+
+.input-extra {
+  display: flex; }
+  .input-extra #time {
+    margin: 0 10px 0 0; }
+
+label {
+  font-weight: 400; }
