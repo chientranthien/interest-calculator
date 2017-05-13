@@ -6,7 +6,7 @@ The requirements were a little bit strange for me.
 Because I've never developed any kind of financial application. 
 
 # 1 hour of testing and fixing cross browser issues.
-<mark>display:flex</mark> dose not work well with Firefox. 
+`display:flex` dose not work well with Firefox. 
 It made the 'time icon' was not well aligned.
 I spent a ton of time to fix this issue.
 
