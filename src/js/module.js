@@ -1,6 +1,6 @@
-angular.module("Appointment", ['ui.router']);
+angular.module("Interest", ['ui.router']);
 
-angular.module("Appointment").config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+angular.module("Interest").config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('home', {
         url: "/home",

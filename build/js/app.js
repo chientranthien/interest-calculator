@@ -1,6 +1,6 @@
-angular.module("Appointment", ['ui.router']);
+angular.module("Interest", ['ui.router']);
 
-angular.module("Appointment").config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+angular.module("Interest").config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('home', {
         url: "/home",
@@ -11,7 +11,7 @@ angular.module("Appointment").config(['$stateProvider', '$urlRouterProvider', fu
     $urlRouterProvider.otherwise("/home");
 }]);
 
-angular.module("Appointment").controller("HomeController", ['$scope', function ($scope) {
+angular.module("Interest").controller("HomeController", ['$scope', function ($scope) {
 
     var vm = this;
     vm.data = {};
@@ -37,7 +37,7 @@ angular.module("Appointment").controller("HomeController", ['$scope', function (
         return calculateSimple();
     }
     function calculateSimple() {
-        //I = Prt
+        //A = P(1 + rt)
         var timeInYear = vm.timeType === "Years" ? vm.time : vm.time / 12;
         return vm.principle * (1.0 + vm.rate * timeInYear / 100.0);
     }
