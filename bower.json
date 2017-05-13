@@ -1,7 +1,7 @@
 {
-  "name": "appointment",
+  "name": "interest-calculator",
   "authors": [
-    "chien@spider"
+    "chientranthien@gmail.com"
   ],
   "description": "Appointment application",
   "main": "",
@@ -23,10 +23,6 @@
     "bootstrap": "^3.3.7",
     "angular": "^1.6.2",
     "angular-ui-router": "^0.4.2",
-    "sockjs-client": "^1.1.2",
-    "stomp-websocket": "^2.3.4",
-    "font-awesome": "fontawesome#^4.7.0",
-    "ng-file-upload": "^12.2.13",
-    "chosen": "^1.7.0"
+    "font-awesome": "fontawesome#^4.7.0"
   }
 }
